@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Grain Bazaar</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/app.js" defer></script>
+</head>
+<body>
+<div class="screen active" id="screen-home">
+<h1 id="Title">Grain Bazaar</h1>
+<p id="introText">
+Connect farmers and buyers directly. Fresh listings, fair prices.
+</p>
+<div id="roleCards">
+<div class="roleCard"
+onclick="goTo('screen-customer')">
+<h2>I'm a customer</h2>
+<p>Search available grain listings</p>
+</div>
+<div class="roleCard"
+onclick="goTo('screen-farmer')">
+<h2>I'm a farmer</h2>
+<p>Manage listings and transactions</p>
+</div>
+</div>
+</div>
+<div class="screen" id="screen-customer">
+<button id="customerBack" onclick="goTo('screen-home')">Back</button>
+<h1 id="customerTitle">Find Grain</h1>
+<div id="customerSearch">
+<h2>Search listings</h2>
+<label>Grain name</label>
+<select id="cust-grain">
+<option value="">Any grain</option>
+</select>
+<label>Max price per unit (₹)</label>
+<input type="number" id="cust-maxprice" placeholder="Any price" min="0">
+<label>Farmer name</label>
+<select id="cust-farmer">
+<option value="">Any farmer</option>
+</select>
+<label>Quantity needed</label>
+<input type="number" id="cust-qty" placeholder="Any quantity" min="0">
+<button id="searchButton" onclick="runCustomerSearch()">Search</button>
+</div>
+<div id="customer-results"></div>
+</div>
+<div class="screen" id="screen-farmer">
+<button id="farmerBack" onclick="goTo('screen-home')">Back</button>
+<h1 id="farmerTitle">Farmer Portal</h1>
+<div id="farmerSelectBox">
+<h2>Select your profile</h2>
+<label>Logged in as</label>
+
+<select id="farmer-select" onchange="loadFarmerDashboard()">
+<option value="">— choose —</option>
+</select>
+</div>
+<div id="farmer-dashboard" style="display:none">
+<div id="farmerTabs">
+<button class="tab active" onclick="switchTab('listings')">My Listings</button>
+<button class="tab" onclick="switchTab('add')">Add Listing</button>
+<button class="tab" onclick="switchTab('transactions')">Transactions</button>
+</div>
+<div id="tab-listings"></div>
+<div id="tab-add" style="display:none">
+<h2>New listing</h2>
+<label>Grain</label>
+<select id="new-grain"></select>
+<label>Quantity</label>
+<input type="number" id="new-qty" placeholder="e.g. 500" min="1">
+<label>Price per unit</label>
+<input type="number" id="new-price" placeholder="e.g. 22" min="1">
+<button id="addListingButton" onclick="addListing()">Add listing</button>
+</div>
+<div id="tab-transactions" style="display:none"></div>
+</div>
+</div>
+<div id="modal-marksold">
+<h2>Mark as sold</h2>
+<label>Customer ID</label>
+<input type="text" id="ms-customer" placeholder="e.g. C201" >
+<label>Quantity sold</label>
+<input type="number" id="ms-qty" placeholder="Units">
+<label>Actual price</label>
+<input type="number" id="ms-price" placeholder="Price" >
+<button id="cancelButton" onclick="closeModal()">Cancel </button>
+<button id="confirmButton" onclick="confirmSold()">Confirm transaction</button>
+</div>
+<div id="toast"></div>
+</body>
+</html>
+

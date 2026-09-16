@@ -1,0 +1,363 @@
+body{
+    background-color: #B8C0C3;
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+.screen{
+    display:none;
+    min-height:100vh;
+    padding:30px;
+}
+
+.screen.active{
+    display:block;
+}
+
+
+#Title{
+    text-align:center;
+    font-size:60px;
+    margin-top:40px;
+}
+
+#introText{
+    text-align:center;
+    font-size:18px;
+}
+
+
+#roleCards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-top:50px;
+}
+
+.roleCard{
+    background-color:white;
+    border:0.5px solid grey;
+    border-radius:15px;
+    width:250px;
+    padding:30px;
+    text-align:center;
+    cursor:pointer;
+}
+
+.roleCard:hover{
+    transform:translateY(-3px);
+}
+
+
+.roleCard h2{
+    font-size:20px;
+}
+
+.roleCard p{
+    color:#666;
+}
+
+
+#customerTitle,
+#farmerTitle{
+    text-align:center;
+    margin-top:30px;
+}
+
+
+#customerBack,
+#farmerBack{
+    position:absolute;
+    top:30px;
+    left:30px;
+    padding:8px 15px;
+    border:0.5px solid grey;
+    border-radius:8px;
+    background-color:white;
+    cursor:pointer;
+}
+
+
+#customerSearch{
+    background-color:white;
+    border:0.5px solid grey;
+    border-radius:15px;
+    width:600px;
+    margin:40px auto;
+    padding:25px;
+}
+
+
+#customerSearch h2{
+    margin-bottom:20px;
+}
+
+
+#customerSearch label,
+#farmerSelectBox label,
+#tab-add label,
+#modal-marksold label{
+    display:block;
+    margin-top:15px;
+    margin-bottom:5px;
+}
+
+
+#customerSearch input,
+#customerSearch select,
+#farmerSelectBox select,
+#tab-add input,
+#tab-add select,
+#modal-marksold input{
+    width:100%;
+    padding:10px;
+    border:0.5px solid grey;
+    border-radius:8px;
+    box-sizing:border-box;
+}
+
+
+#searchButton,
+#addListingButton,
+#confirmButton{
+    margin-top:20px;
+    padding:10px 20px;
+    border:0.5px solid grey;
+    border-radius:8px;
+    background-color:white;
+    cursor:pointer;
+}
+
+
+#customer-results{
+    width:600px;
+    margin:auto;
+}
+
+
+.result-card{
+    background-color:white;
+    border:0.5px solid grey;
+    border-radius:12px;
+    padding:15px;
+    margin-top:10px;
+    display:flex;
+    justify-content:space-between;
+}
+
+
+.result-card h4{
+    margin:0;
+    font-size:17px;
+}
+
+
+.result-card p{
+    color:#666;
+}
+
+
+.price{
+    font-size:20px;
+    font-weight:bold;
+}
+
+
+.buy-btn{
+    margin-top:10px;
+    padding:7px 15px;
+    border:0.5px solid grey;
+    border-radius:8px;
+    background-color:white;
+    cursor:pointer;
+}
+
+
+.badge{
+    border-radius:10px;
+    padding:3px 8px;
+    font-size:11px;
+}
+
+
+.badge-green{
+    background-color:#DDEBD0;
+}
+
+
+.badge-amber{
+    background-color:#F3E0B8;
+}
+
+
+.badge-gray{
+    background-color:#ddd;
+}
+
+
+.section-label{
+    margin-top:25px;
+    margin-bottom:10px;
+    font-weight:bold;
+}
+
+
+.alert-box{
+    background-color:#F3D5CC;
+    border:0.5px solid #B98A7C;
+    border-radius:10px;
+    padding:15px;
+    margin-top:20px;
+}
+
+
+.empty-state{
+    text-align:center;
+    padding:30px;
+}
+
+
+#farmerSelectBox{
+    background-color:white;
+    border:0.5px solid grey;
+    border-radius:15px;
+    width:500px;
+    margin:40px auto;
+    padding:25px;
+}
+
+
+#farmer-dashboard{
+    width:600px;
+    margin:auto;
+}
+
+
+#farmerTabs{
+    display:flex;
+    gap:10px;
+    border-bottom:0.5px solid grey;
+    margin-bottom:20px;
+}
+
+
+.tab{
+    padding:10px 15px;
+    border:0;
+    background:none;
+    cursor:pointer;
+}
+
+
+.tab.active{
+    border-bottom:2px solid black;
+}
+
+
+#tab-add{
+    background-color:white;
+    border:0.5px solid grey;
+    border-radius:15px;
+    padding:25px;
+}
+
+
+.listing-card{
+    background-color:white;
+    border:0.5px solid grey;
+    border-radius:12px;
+    padding:15px;
+    margin-bottom:10px;
+}
+
+
+.listing-card p{
+    margin:5px 0;
+}
+
+
+.listing-card-actions{
+    margin-top:15px;
+    padding-top:10px;
+    border-top:0.5px solid #ddd;
+}
+
+
+.action-btn{
+    padding:7px 12px;
+    border:0.5px solid grey;
+    border-radius:8px;
+    background-color:white;
+    cursor:pointer;
+    margin-right:5px;
+}
+
+
+.action-btn.danger{
+    color:#A32D2D;
+    border-color:#A32D2D;
+}
+
+
+#modal-marksold{
+    display:none;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background-color:white;
+    border:0.5px solid grey;
+    border-radius:15px;
+    width:400px;
+    padding:25px;
+    box-shadow:0px 5px 20px rgba(0,0,0,0.2);
+}
+
+
+#modal-marksold.open{
+    display:block;
+}
+
+
+#cancelButton{
+    margin-top:20px;
+    padding:10px 20px;
+    border:0.5px solid grey;
+    border-radius:8px;
+    background-color:white;
+    cursor:pointer;
+}
+
+
+#toast{
+    display:none;
+    position:fixed;
+    bottom:25px;
+    left:50%;
+    transform:translateX(-50%);
+    background-color:white;
+    border:0.5px solid grey;
+    border-radius:10px;
+    padding:12px 20px;
+}
+
+
+@media(max-width:700px){
+
+    #customerSearch,
+    #customer-results,
+    #farmerSelectBox,
+    #farmer-dashboard{
+        width:90%;
+    }
+
+    #roleCards{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .result-card{
+        flex-direction:column;
+    }
+
+}
