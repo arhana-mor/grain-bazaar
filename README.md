@@ -139,6 +139,11 @@ The farmer portal currently uses **profile selection rather than full user authe
 
 The application uses **Oracle XE locally** as its database layer.
 
+## Data Disclaimer
+
+All farmer names, customer details, phone numbers, grain listings, prices, and transaction records included in this project are **fictional data created for demonstration purposes**. They do not represent real individuals, businesses, or transactions.
+
+
 ## Author
 
 **Arhana Mor**
