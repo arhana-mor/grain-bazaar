@@ -4,11 +4,11 @@ A database-driven web application that connects farmers and customers directly f
 
 ## About the Project
 
-Grain Bazaar is a web-based prototype designed to make it easier for customers to find grain from farmers directly.
+Grain Bazaar is a web-based application designed to make it easier for customers to find grain from farmers directly.
 
 Customers can search available grain listings using filters such as grain type, quantity, farmer, and price. Farmers can manage their listings and keep track of their completed transactions through the farmer portal.
 
-The project combines a **vanilla JavaScript frontend**, **Node.js/Express backend**, and an **Oracle database with PL/SQL stored procedures**.
+The project combines a **JavaScript frontend**, **Node.js/Express backend**, and an **Oracle database with PL/SQL stored procedures**.
 
 ## Features
 
@@ -133,9 +133,7 @@ Add / remove listings
 Record and view transactions
 ```
 
-## Prototype Scope
-
-Grain Bazaar is currently a working prototype demonstrating the core functionality of a farmer-to-customer grain marketplace.
+## Project Scope
 
 The farmer portal currently uses **profile selection rather than full user authentication**.
 
