@@ -29,16 +29,22 @@ screen.classList.remove('active');
 });
 
 document.getElementById(id).classList.add('active');
-
+const grainsImg = document.getElementById('grainsImg');
 if(id == 'screen-customer'){
+grainsImg.style.display = 'none';
 await initCustomerScreen();
+
 }
 
 if(id == 'screen-farmer'){
+grainsImg.style.display = 'none';
 await initFarmerScreen();
 }
-}
+  if(id == 'screen-home'){
 
+grainsImg.style.display = 'block';
+ }
+}
 async function initCustomerScreen(){
 try{
 const farmers = await apiFetch('/farmers');
